@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Cocktail table editor</title>
+    <link rel="stylesheet" href="AlcoholStyle.css" />
+
+</head>
+<body>
+    <h1>Cocktail editor</h1>
+    <button type="button" id="navbtn" class="brandtable" onclick="location.href='http://localhost:3322/brand.html'">Brand table</button>
+    <button type="button" id="navbtn" class="alcoholtable" onclick="location.href='http://localhost:3322/alcohol.html'">Alcohol table</button>
+    <br />
+    <br />
+    <div id="parent">
+        <div id="tbl">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Cocktail ID</th>
+                        <th>Name</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                </tbody>
+            </table>
+        </div>
+        <div id="createform">
+            <label>Cocktail name</label>
+            <br />
+            <input type="text" id="cocktailname" />
+            <br />
+            <label>Price</label>
+            <br />
+            <input type="text" id="price" />
+            <br />
+            <button type="button" onclick="create()">Add cocktail</button>
+            <br />
+            <div id="updateform">
+                <label>Cocktail name</label>
+                <br />
+                <input type="text" id="cocktailnametoupdate" />
+                <br />
+                <label>Price</label>
+                <br />
+                <input type="text" id="pricetoupdate" />
+                <br />
+                <button type="button" onclick="update()">Update cocktail</button>
+            </div>
+        </div>
+        <div id="noncrudform">
+            <label>Average Price</label>
+            <br />
+            <button type="button" onclick="display2()">Let's see</button>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="CocktailScript.js"></script>
+</body>
+</html>

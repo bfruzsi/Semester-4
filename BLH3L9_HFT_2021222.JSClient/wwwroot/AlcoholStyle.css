@@ -1,0 +1,90 @@
+﻿body {
+    background-color: #F9F5EB;
+    font-family: "Verdana"
+}
+
+table {
+    width: 50%;
+}
+
+table, th, td {
+    border: 1px solid black;
+    text-align: center;
+    width: 700px;
+    border-color: #F9F5EB;
+}
+
+th {
+    background-color: #F9F5EB;
+    color: #1C3879;
+    border: hidden
+}
+
+h1 {
+    text-align: center;
+    color: #1C3879;
+}
+
+button {
+    display: compact;
+    background-color: #607EAA;
+    border: ridge;
+    border-color: #EAE3D2;
+    color: white;
+}
+
+input {
+    background-color: #EAE3D2;
+    border: ridge
+}
+
+label {
+    color: #1C3879;
+}
+
+
+.brandtable {
+    background-color: #1C3879;
+}
+
+.alcoholtable {
+    background-color: #1C3879;
+}
+
+#parent {
+    display: flex;
+}
+
+#tbl {
+    flex: 50px;
+    width: 400px;
+}
+
+#createform {
+    flex: 1;
+    text-align: center;
+}
+
+    #createform label, button, input {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    #createform label {
+        font-weight: bolder;
+    }
+
+#updateform {
+    display: none;
+    width: 300px;
+    text-align: center;
+}
+
+    #updateform label, button, input {
+        margin: 10px;
+        padding: 5px;
+    }
+
+    #updateform label {
+        font-weight: bolder;
+    }

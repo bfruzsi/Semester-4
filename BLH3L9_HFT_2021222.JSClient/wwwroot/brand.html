@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Brand table editor</title>
+    <link rel="stylesheet" href="AlcoholStyle.css" />
+
+</head>
+<body>
+    <h1>Brand editor</h1>
+    <button type="button" id="navbtn" onclick="location.href='http://localhost:3322/alcohol.html'">Alcohol table</button>
+    <button type="button" id="navbtn" onclick="location.href='http://localhost:3322/cocktail.html'">Cocktail table</button>
+    <div id="parent">
+        <div id="tbl">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Brand ID</th>
+                        <th>Name</th>
+                        <th>Percentage</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                </tbody>
+            </table>
+        </div>
+        <div id="createform">
+            <label>Brand name</label>
+            <br />
+            <input type="text" id="brandname" />
+            <br />
+            <label>Percentage</label>
+            <br />
+            <input type="text" id="percentage" />
+            <br />
+            <button type="button" onclick="create()">Add brand</button>
+            <br />
+            <div id="updateform">
+                <label>Brand name</label>
+                <br />
+                <input type="text" id="brandnametoupdate" />
+                <br />
+                <label>Percentage</label>
+                <br />
+                <input type="text" id="percentagetoupdate" />
+                <br />
+                <button type="button" onclick="update()">Update brand</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="BrandScript.js"></script>
+</body>
+</html>

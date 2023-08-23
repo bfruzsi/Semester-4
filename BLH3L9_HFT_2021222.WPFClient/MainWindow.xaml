@@ -1,0 +1,19 @@
+﻿<Window x:Class="BLH3L9_HFT_2021222.WPFClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLH3L9_HFT_2021222.WPFClient"
+        xmlns:vms="clr-namespace:BLH3L9_HFT_2021222.WPFClient.ViewModels"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="300">
+    <Window.DataContext>
+        <vms:MainWindowViewModel/>
+    </Window.DataContext>
+    <Grid Background="Lavender">
+        <Label HorizontalAlignment="Center" Margin="0,50,0,0" FontSize="40" FontWeight="Bold" Foreground="PaleVioletRed">MENU</Label>
+        <Button Command="{Binding GoToAlcoholsCommand}" HorizontalAlignment="Center" Height="30" Width="200" Margin="0,128,0,226" Background="FloralWhite" Foreground="PaleVioletRed" FontWeight="Black">Alcohols</Button>
+        <Button Command="{Binding GoToBrandsCommand}" HorizontalAlignment="Center" Height="30" Width="200" Margin="0,208,0,146" Background="FloralWhite" Foreground="PaleVioletRed" FontWeight="Black">Brands</Button>
+        <Button Command="{Binding GoToCocktailsCommand}" HorizontalAlignment="Center" Height="30" Width="200" Margin="0,285,0,69" Background="FloralWhite" Foreground="PaleVioletRed" FontWeight="Black">Cocktails</Button>
+    </Grid>
+</Window>

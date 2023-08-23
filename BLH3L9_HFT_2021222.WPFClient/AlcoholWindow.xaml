@@ -1,0 +1,35 @@
+﻿<Window x:Class="BLH3L9_HFT_2021222.WPFClient.AlcoholWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BLH3L9_HFT_2021222.WPFClient"
+        xmlns:vms="clr-namespace:BLH3L9_HFT_2021222.WPFClient.ViewModels"
+        mc:Ignorable="d"
+        Title="Alcohol Editor" Height="450" Width="800">
+    <Window.DataContext>
+        <vms:AlcoholWindowViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="1*"/>
+        </Grid.ColumnDefinitions>
+        <ListBox ItemsSource="{Binding Alcohols}" SelectedItem="{Binding SelectedAlcohol}" Background="Lavender">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <Label Content="{Binding AlcoholName}"></Label>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
+        <StackPanel Grid.Column="1" Background="Lavender">
+            <Label Content="Name" Background="FloralWhite" Foreground="PaleVioletRed" FontWeight="Black" Padding="10"/>
+            <TextBox Text="{Binding SelectedAlcohol.AlcoholName}" Padding="10" Margin="0,0,0,50" Background="GhostWhite"/>
+            <Label Content="Grain" Background="FloralWhite" Foreground="PaleVioletRed" FontWeight="Black" Padding="10"/>
+            <TextBox Text="{Binding SelectedAlcohol.Grain}" Padding="10" Margin="0,0,0,50" Background="GhostWhite"/>
+            <Button Content="Create Alcohol" Command="{Binding CreateAlcoholCommand}" Margin="10" Padding="10" Foreground="PaleVioletRed" Background="FloralWhite" FontWeight="Black"/>
+            <Button Content="Delete Alcohol" Command="{Binding DeleteAlcoholCommand}" Margin="10" Padding="10" Foreground="PaleVioletRed" Background="FloralWhite" FontWeight="Black"/>
+            <Button Content="Update Alcohol" Command="{Binding UpdateAlcoholCommand}" Margin="10" Padding="10" Foreground="PaleVioletRed" Background="FloralWhite" FontWeight="Black"/>
+        </StackPanel>
+    </Grid>
+</Window>

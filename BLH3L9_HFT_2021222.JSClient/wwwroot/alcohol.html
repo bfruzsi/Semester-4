@@ -1,0 +1,57 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Alcohol table editor</title>
+    <link rel="stylesheet" href="AlcoholStyle.css" />
+
+</head>
+<body>
+    <h1>Alcohol editor</h1>
+    <button type="button" id="navbtn" class="brandtable" onclick="location.href='http://localhost:3322/brand.html'">Brand table</button>
+    <button type="button" id="navbtn" class="alcoholtable" onclick="location.href='http://localhost:3322/cocktail.html'">Cocktail table</button>
+    <br />
+    <br />
+    <div id="parent">
+        <div id="tbl">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Alcohol ID</th>
+                        <th>Name</th>
+                        <th>Grain</th>
+                    </tr>
+                </thead>
+                <tbody id="results">
+                </tbody>
+            </table>
+        </div>
+        <div id="createform">
+            <label>Alcohol name</label>
+            <br />
+            <input type="text" id="alcoholname" />
+            <br />
+            <label>Grain type</label>
+            <br />
+            <input type="text" id="grain" />
+            <br />
+            <button type="button" onclick="create()">Add alcohol</button>
+            <br />
+            <div id="updateform">
+                <label>Alcohol name</label>
+                <br />
+                <input type="text" id="alcoholnametoupdate" />
+                <br />
+                <label>Grain type</label>
+                <br />
+                <input type="text" id="grainnametoupdate" />
+                <br />
+                <button type="button" onclick="update()">Update alcohol</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/microsoft-signalr/6.0.1/signalr.js"></script>
+    <script src="AlcoholScript.js"></script>
+</body>
+</html>
